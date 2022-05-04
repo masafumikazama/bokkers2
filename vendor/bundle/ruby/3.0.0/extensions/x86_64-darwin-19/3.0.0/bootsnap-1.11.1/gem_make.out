@@ -1,0 +1,15 @@
+current directory: /Users/mk/bookers2/vendor/bundle/ruby/3.0.0/gems/bootsnap-1.11.1/ext/bootsnap
+/Users/mk/.rbenv/versions/3.0.1/bin/ruby -I /Users/mk/.rbenv/versions/3.0.1/lib/ruby/3.0.0 -r ./siteconf20220504-38963-wyrsiz.rb extconf.rb
+creating Makefile
+
+current directory: /Users/mk/bookers2/vendor/bundle/ruby/3.0.0/gems/bootsnap-1.11.1/ext/bootsnap
+make DESTDIR\= clean
+
+current directory: /Users/mk/bookers2/vendor/bundle/ruby/3.0.0/gems/bootsnap-1.11.1/ext/bootsnap
+make DESTDIR\=
+compiling bootsnap.c
+linking shared-object bootsnap/bootsnap.bundle
+
+current directory: /Users/mk/bookers2/vendor/bundle/ruby/3.0.0/gems/bootsnap-1.11.1/ext/bootsnap
+make DESTDIR\= install
+/usr/local/bin/ginstall -c -m 0755 bootsnap.bundle ./.gem.20220504-38963-93mgss/bootsnap
