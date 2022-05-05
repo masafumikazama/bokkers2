@@ -1,0 +1,11 @@
+<% @books.each do |book| %>
+<div>
+  <%= link_to user_path(current_user) do %>
+    <p>投稿ユーザー画像：<%= image_tag book.user.get_profile_image(100,100) %></p>
+  <% end %>
+  <%= link_to book_path(book.id) do %>
+    <%= book.title %>
+  <% end %>
+  <p>Opinion<%= book.body %></p>
+</div>
+<% end %>
