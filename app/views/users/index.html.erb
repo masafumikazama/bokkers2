@@ -26,33 +26,29 @@
   </div>
 
   <div class="col-md-8 offset-md-1">
-    <h2>Book detail</h2>
-    <table class="table">
-      <tbody>
-        <tr>
-          <td>
-            <%= link_to user_path(current_user) do %>
-              <%= image_tag @books.user.get_profile_image(100,100) %></br>
-              <%= @books.user.name %>
-            <% end %>
-          </td>
-          <td>
-            <%= link_to book_path(@books.id) do %>
-              <%= @books.title %>
-            <% end %>
-          </td>
-          <td>Opinion<%= @books.body %></td>
-          <% if @books.user === current_user %>
-          <td>
-            <%= link_to "Edit", edit_book_path(@books), class: 'btn btn-sm btn-success' %>
-          </td>
-          <td>
-            <%= link_to "Destroy", book_path(@books), method: :delete, class: 'btn btn-sm btn-danger', data: { confirm: "本当に消しますか？" } %>
-          </td>
+    <h2>Users</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>image</th>
+            <th>name</th>
+            <th colspan="3"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @users.each do |user| %>
+          <tr>
+            <td>
+              <%= image_tag user.get_profile_image(100,100) %>
+            </td>
+            <td><%= user.name %></td>
+            <td>
+              <%= link_to "Show", user_path(user) %>
+            </td>
+          </tr>
           <% end %>
-        </tr>
-      </tbody>
-    </table>
+        </tbody>
+      </table>
   </div>
   </div>
 </div>

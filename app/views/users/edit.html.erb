@@ -1,10 +1,16 @@
-<h2>User info</h2>
-<%= form_with model: @user do |f| %>
-  <label for="inputName">Name</label>
-  <%= f.text_field :name, autofocus: true, id:"inputName"%>
-  <label for="inputImage">Image</label>
-  <%= f.file_field :profile_image, accept: "image/*" %>
-  <label for="inputName">Introduction</label>
-  <%= f.text_field :introduction, autofocus: true%>
-  <%= f.submit "Update User" %>
-<% end %>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0 mx-auto mt-3">
+      <h2>User info</h2>
+      <%= form_with model: @user do |f| %>
+        <%= f.label :name %>
+        <%= f.text_field :name, autofocus: true, id:"inputName", class: 'form-control mb-3'%>
+        <%= f.label "Image" %></br>
+        <%= f.file_field :profile_image, accept: "image/*", class: 'mb-3' %></br>
+        <%= f.label :introduction %>
+        <%= f.text_area :introduction, autofocus: true, class: 'form-control mb-3' %>
+        <%= f.submit "Update User", class: "btn btn-secondary" %>
+      <% end %>
+    </div>
+  </div>
+</div>
