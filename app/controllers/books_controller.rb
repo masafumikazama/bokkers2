@@ -21,13 +21,15 @@ class BooksController < ApplicationController
       redirect_to book_path(@book)
       flash[:success] = 'create book successfully'
     else
-      render :new
+      @books = Book.all
+      render :index
       flash[:danger] = 'carete error'
     end
   end
 
   def edit
     @book = Book.find(params[:id])
+    redirect_to books_path unless current_user === @book.user
   end
 
   def update
